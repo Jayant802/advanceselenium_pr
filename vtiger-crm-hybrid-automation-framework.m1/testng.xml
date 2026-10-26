@@ -1,0 +1,12 @@
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <test name="Test">
+        <parameter name="bro" value="chrome"/>
+        <classes>
+            <class name="TypeOfExecution.LeadTest"/>
+            <class name="TypeOfExecution.OrgTest"/>
+            <class name="TypeOfExecution.ContactText"/>
+        </classes>
+    </test>
+</suite>

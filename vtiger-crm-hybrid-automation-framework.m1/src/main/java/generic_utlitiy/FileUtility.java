@@ -1,4 +1,4 @@
-package generic_utlity;
+package generic_utlitiy;
 
 import java.io.FileInputStream;
 import java.io.FileReader;

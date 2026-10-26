@@ -45,5 +45,12 @@ public class LoginPage {
 	public WebElement getLoginButton() {
 		return loginButton;
 	}
+	
+	// after the listener 
+	public void login(String un, String pwd) {
+		usernameField.sendKeys(un);
+		passwordField.sendKeys(pwd);
+		loginButton.click();
+	}
 
 }

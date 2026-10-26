@@ -3,11 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="opp.opportunityTest">
+      <class name="contact.ContactTest">
         <methods>
-          <include name="createopportunityTest"/>
+          <include name="logOut"/>
+          <include name="tearDown"/>
+          <include name="login"/>
+          <include name="setUp"/>
+          <include name="createContactTest"/>
         </methods>
-      </class> <!-- opp.opportunityTest -->
+      </class> <!-- contact.ContactTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

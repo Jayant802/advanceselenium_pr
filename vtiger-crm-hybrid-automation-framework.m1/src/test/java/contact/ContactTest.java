@@ -15,10 +15,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import generic_utlity.FileUtility;
-import generic_utlity.JavaUtility;
+import base_utlitiy.BaseClass;
+import generic_utlitiy.FileUtility;
+import generic_utlitiy.JavaUtility;
 import object_repository.ContactPage;
 import object_repository.HomePage;
 import object_repository.LoginPage;
@@ -34,8 +37,10 @@ import object_repository.VerifyContactPage;
  * Vtiger CRM application using Page Object Model.
  *
  * Author : Piyush Baldaniya
+ * 
  */
-public class CreateContactTest {
+@Listeners(listeners_utility.List_Imp.class)
+public class ContactTest extends BaseClass {
 
 //	public static void main(String[] args) throws InterruptedException, IOException, ParseException {
 	
@@ -58,16 +63,18 @@ public class CreateContactTest {
 		// 1. OPEN THE BROWSER
 		// ============================================================
 
-		System.out.println("====================================================");
-		System.out.println("TEST EXECUTION STARTED");
-		System.out.println("Test Case : Create Contact");
-		System.out.println("====================================================");
-
-		System.out.println("[INFO] Launching Chrome browser...");
-
-		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+		// after listeners comment 
+		
+//		System.out.println("====================================================");
+//		System.out.println("TEST EXECUTION STARTED");
+//		System.out.println("Test Case : Create Contact");
+//		System.out.println("====================================================");
+//
+//		System.out.println("[INFO] Launching Chrome browser...");
+//
+//		WebDriver driver = new ChromeDriver();
+//		driver.manage().window().maximize();
+//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
 		// Instantiate ContactPage object
 		ContactPage cp = new ContactPage(driver);
@@ -79,29 +86,31 @@ public class CreateContactTest {
 		// 2. LOGIN
 		// ============================================================
 
-		System.out.println("----------------------------------------------------");
-		System.out.println("[STEP 1] Navigating to Vtiger CRM application...");
-
-		driver.get(url);
-
-		System.out.println("[INFO] Vtiger CRM application opened.");
-
-		WebElement username = lp.getUsernameField();
-		WebElement password = lp.getPasswordField();
-		WebElement loginBtn = lp.getLoginButton();
-
-		System.out.println("[INFO] Login page elements identified.");
-
-		username.sendKeys(un);
-		System.out.println("[INFO] Username entered.");
-
-		password.sendKeys(pwd);
-		System.out.println("[INFO] Password entered.");
-
-		loginBtn.click();
-
-		System.out.println("[INFO] Login button clicked.");
-		System.out.println("[INFO] Login operation completed.");
+		//----------------- after the listeners comments this code 
+		
+//		System.out.println("----------------------------------------------------");
+//		System.out.println("[STEP 1] Navigating to Vtiger CRM application...");
+//
+//		driver.get(url);
+//
+//		System.out.println("[INFO] Vtiger CRM application opened.");
+//
+//		WebElement username = lp.getUsernameField();
+//		WebElement password = lp.getPasswordField();
+//		WebElement loginBtn = lp.getLoginButton();
+//
+//		System.out.println("[INFO] Login page elements identified.");
+//
+//		username.sendKeys(un);
+//		System.out.println("[INFO] Username entered.");
+//
+//		password.sendKeys(pwd);
+//		System.out.println("[INFO] Password entered.");
+//
+//		loginBtn.click();
+//
+//		System.out.println("[INFO] Login button clicked.");
+//		System.out.println("[INFO] Login operation completed.");
 
 		// ============================================================
 		// 3. CREATE CONTACT
@@ -147,41 +156,52 @@ public class CreateContactTest {
 		System.out.println("[INFO] Expected Contact Last Name : " + lastName);
 		System.out.println("[INFO] Actual Contact Last Name   : " + actLastName);
 
-		if (actLastName.equals(lastName)) {
-			System.out.println("[PASS] Contact created successfully !!!");
-		} else {
-			System.out.println("[FAIL] Contact creation failed...");
-		}
+		//----------------- after the listeners comments this code 
+
+//		if (actLastName.equals(lastName)) {
+//			System.out.println("[PASS] Contact created successfully !!!");
+//		} else {
+//			System.out.println("[FAIL] Contact creation failed...");
+//		}
+		
+		Assert.assertEquals(actLastName, lastName + "abc");
+		
 
 		// ============================================================
 		// 6. LOGOUT
 		// ============================================================
+//
+		//----------------- after the listeners comments this code 
 
-		System.out.println("----------------------------------------------------");
-		System.out.println("[STEP 5] Logging out from Vtiger CRM...");
-
-		WebElement profileIcon = hp.getProfileIcon();
-		System.out.println("[INFO] Profile icon identified.");
-
-		Actions act = new Actions(driver);
-		act.moveToElement(profileIcon).build().perform();
-		System.out.println("[INFO] Mouse moved to profile icon.");
-
-
-		System.out.println("[INFO] Sign Out option clicked.");
-		System.out.println("[INFO] Logout completed successfully.");
+		
+//		System.out.println("----------------------------------------------------");
+//		System.out.println("[STEP 5] Logging out from Vtiger CRM...");
+//
+//		WebElement profileIcon = hp.getProfileIcon();
+//		System.out.println("[INFO] Profile icon identified.");
+//
+//		Actions act = new Actions(driver);
+//		act.moveToElement(profileIcon).build().perform();
+//		System.out.println("[INFO] Mouse moved to profile icon.");
+//
+//
+//		System.out.println("[INFO] Sign Out option clicked.");
+//		System.out.println("[INFO] Logout completed successfully.");
 
 		// ============================================================
 		// 7. CLOSE THE BROWSER
 		// ============================================================
 
-		System.out.println("----------------------------------------------------");
-		System.out.println("[STEP 6] Closing browser...");
+		//----------------- after the listeners comments this code 
 
-		Thread.sleep(1000);
-
-		driver.quit();
-		System.out.println("[INFO] Browser closed successfully.");
+		
+//		System.out.println("----------------------------------------------------");
+//		System.out.println("[STEP 6] Closing browser...");
+//
+//		Thread.sleep(1000);
+//
+//		driver.quit();
+//		System.out.println("[INFO] Browser closed successfully.");
 
 		// ============================================================
 		// TEST EXECUTION COMPLETED

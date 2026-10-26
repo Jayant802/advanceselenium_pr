@@ -17,9 +17,9 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import extra.GenRanNum;
-import generic_utlity.FileUtility;
-import generic_utlity.JavaUtility;
-import generic_utlity.WebDriverUtility;
+import generic_utlitiy.FileUtility;
+import generic_utlitiy.JavaUtility;
+import generic_utlitiy.WebDriverUtility;
 import object_repository.ContactPage;
 import object_repository.HomePage;
 import object_repository.LoginPage;

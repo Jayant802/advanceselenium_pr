@@ -1,4 +1,4 @@
-package generic_utlity;
+package generic_utlitiy;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;

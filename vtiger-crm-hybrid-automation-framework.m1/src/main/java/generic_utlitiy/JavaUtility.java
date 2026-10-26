@@ -1,4 +1,4 @@
-package generic_utlity;
+package generic_utlitiy;
 
 public class JavaUtility {
 	public static int generateRandomNumber() {

@@ -61,4 +61,12 @@ public class HomePage {
 	public WebElement getSignOutLink() {
 		return signOutLink;
 	}
+	
+	
+	// during listener topic add this methods 
+	public void logout() {
+		profileIcon.click();
+		signOutLink.click();
+	}
+	
 }

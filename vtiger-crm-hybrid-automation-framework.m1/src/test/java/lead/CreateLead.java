@@ -11,8 +11,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import extra.GenRanNum;
-import generic_utlity.FileUtility;
-import generic_utlity.JavaUtility;
+import generic_utlitiy.FileUtility;
+import generic_utlitiy.JavaUtility;
 import object_repository.LeadPage;
 import object_repository.OrgPage;
 
